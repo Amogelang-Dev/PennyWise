@@ -1,66 +1,82 @@
-PennyWise - Gamified Personal Finance
-PennyWise is a modern Android application designed to help users take control of their financial lives through automated expense tracking, goal setting, and an engaging gamified experience.
-🚀 Features
-•
-Automated Expense Tracking: Captures transaction notifications from major South African banks (FNB, Capitec, Standard Bank, Absa, Nedbank, TymeBank, Discovery Bank) to auto-log expenses.
-•
-Gamified Journey: Visualizes financial progress on an interactive S-curve map. Users earn XP for logging expenses and staying consistent, leveling up from "Financial Novice" to "Generational Wealth Builder."
-•
-Budget Management: Set monthly income, minimum savings goals, and maximum spending limits with real-time visual feedback on the dashboard.
-•
-Digital Receipt Management: Attach photos of receipts to transactions for better record-keeping.
-•
-Financial Tips: Daily financial advice fetched from the AdviceSlip API.
-•
-ATM Finder: Quickly locate the nearest ATM using geo-intents (Google Maps/OpenStreetMap).
-•
-Comprehensive Reports: Detailed category breakdowns and downloadable spending statements.
-•
-Cloud Sync: Firebase Firestore integration to sync XP and user profile data across devices.
-🛠 Tech Stack
-•
-Language: Kotlin
-•
-UI Framework: Jetpack Compose (Modern UI) & XML (Legacy UI support)
-•
-Local Database: SQLite (via DatabaseHelper)
-•
-Backend: Firebase Firestore (Auth & Cloud Sync)
-•
-Networking: OkHttp (for AdviceSlip API)
-•
-Architecture: Activity-based with specialized services (Notification Listener)
-📦 Installation & Setup
-1.
-Clone the repository: git clone https://github.com/your-repo/pennywise.git
-2.
-Open in Android Studio: Ensure you have the latest version of Arctic Fox or higher.
-3.
-Firebase Setup:
-◦
-Create a project in the Firebase Console.
-◦
-Add your Android app's package name (com.example.navigation).
-◦
-Download google-services.json and place it in the app/ directory.
-◦
-Enable Firestore and Authentication (Email/Password).
-4.
-Permissions:
-◦
-The app requires BIND_NOTIFICATION_LISTENER_SERVICE to capture bank transactions.
-◦
-Grant Notification Access in Android Settings after installation.
-📱 How It Works
-1.
-Register/Login: Securely create an account using Firebase.
-2.
-Set Budgets: Input your monthly income and limits in the Budget section.
-3.
-Log Expenses: Add manual expenses via the '+' button or let the NotificationService handle it automatically.
-4.
-Level Up: Watch your progress on the S-curve in the 'Progress' tab as you earn XP.
-5.
-Analyze: Check the 'Reports' section to see where your money goes.
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+# PennyWise
+
+PennyWise is a personal finance and budget tracking Android app built to help users manage their money more effectively. The app is designed for tracking income, expenses, monthly budgets, and spending patterns in a clean, simple interface.
+
+## Overview
+
+PennyWise helps you:
+
+- Track day-to-day expenses and income
+- Organize spending by categories
+- Set and monitor monthly budgets
+- Review spending trends over time
+- Store financial data locally with SQLite
+
+This project is built with Kotlin for Android and focuses on a lightweight, personal finance workflow.
+
+## Features
+
+- Income and expense tracking
+- Budget creation and monitoring
+- Category-based spending organization
+- Simple financial summaries
+- Local data persistence using SQLite
+- Mobile-first user experience
+
+## Tech Stack
+
+- Kotlin
+- Android SDK
+- SQLite
+- Gradle
+
+## Getting Started
+
+### Prerequisites
+
+- Android Studio
+- JDK 17 or newer
+- Android SDK configured on your machine
+
+### Run the app
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Amogelang-Dev/PennyWise.git
+   ```
+2. Open the project in Android Studio.
+3. Let Gradle sync the project.
+4. Run the app on an emulator or a connected Android device.
+
+## Project Structure
+
+```text
+PennyWise/
+├── app/
+├── gradle/
+├── build.gradle.kts
+├── settings.gradle.kts
+├── README.md
+├── .gitignore
+└── .idea/
+```
+
+## Future Improvements
+
+- Add recurring transaction support
+- Improve budget insights and visual reports
+- Add data export/import
+- Enhance transaction filtering and search
+- Introduce analytics dashboards
+
+## Contributing
+
+Contributions are welcome. If you want to improve PennyWise, feel free to open an issue or submit a pull request.
+
+## License
+
+This project does not currently specify a license. If you plan to publish or share it publicly, consider adding an appropriate open-source license.
+
+## Contact
+
+For questions, feedback, or feature ideas, use the repository's issue tracker.
